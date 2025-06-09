@@ -11,6 +11,95 @@ body {
   color: #111;
   padding: 40px 60px;
 }
+.navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
 
 .publications-header h1 {
   font-size: 48px;
