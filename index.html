@@ -36,7 +36,7 @@
   <div class="gallery-container">
     <div class="gallery-slider">
 
-      <!-- Slide 1 -->
+     
       <div class="gallery-slide">
         <img src="rising 4.webp" alt="Delhi Rising Slide" />
         <div class="overlay">
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Slide 2 -->
+ 
       <div class="gallery-slide">
         <img src="rising2.jpg" alt="Heat Action Plan Slide" />
         <div class="overlay">
@@ -56,7 +56,7 @@
         </div>
       </div>
 
-      <!-- Slide 3 -->
+   
       <div class="gallery-slide">
         <img src="savedwarkaforest.jpg" alt="Nilgai Conservation" />
         <div class="overlay">
@@ -66,7 +66,7 @@
         </div>
       </div>
 
-      <!-- Slide 4 -->
+   
       <div class="gallery-slide">
         <img src="delhi rising .jpg" alt="Delhi Relief Slide" />
         <div class="overlay">
@@ -147,6 +147,8 @@
     <button class="load-more-btn">Load more</button>
   </div>
 </section>
+
+
 
 <section class="gallery-section">
   <h2>Gallery</h2>
@@ -236,30 +238,91 @@
 </section>
 </div>
 
-<section class="signup-section">
-  <h2>Get action alerts in your inbox</h2>
+<div class="h2_name"><h2>Get action alerts in your inbox</h2></div>
 
+<section class="signup-section">
   <form class="signup-form">
-    <div class="form-group">
-      <input type="text" placeholder="First name" name="first-name" required>
-      <input type="text" placeholder="Last name" name="last-name" required>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="first-name">First name</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last name</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
     </div>
 
-    <div class="form-group">
-      <input type="text" placeholder="Mobile phone number" name="phone">
-      <input type="email" placeholder="Email*" name="email" required>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Mobile phone number</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email<span style="color: red">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
     </div>
 
     <p class="privacy-text">
-      GPIN needs the contact information you provide to us to contact you about our products and services. You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our Privacy Policy.
+      GPIN needs the contact information you provide to us to contact you about our products and services.
+      You may unsubscribe from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our Privacy Policy.
     </p>
 
     <button type="submit" class="submit-btn">Submit</button>
   </form>
 </section>
 
-  
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-column footer-country">
+  <div class="country-wrapper">
+    <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+    <p class="country-select">India ▼</p>
+  </div>
+</div>
+<hr class="footer-divider">
 
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
 
 
 </body>

@@ -326,7 +326,7 @@
   color: white;
 }
 .gallery-section {
-  padding: 3rem 2rem;
+  padding: 5rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,7 +336,7 @@
   font-size: 1.8rem;
   margin-bottom: 2rem;
   font-weight: bold;
-  text-align: center;
+  text-align:left;
 }
 
 .gallery-grid {
@@ -347,8 +347,8 @@
 }
 
 .gallery-grid img {
-  width: 200px;
-  height: 200px;
+  width: 270px;
+  height: 270px;
   object-fit: cover;
 
 }
@@ -382,7 +382,7 @@
 .video-item iframe {
   width: 100%;
   height: 200px;
-  border-radius: 8px;
+  
 }
 
 .video-item p {
@@ -453,8 +453,15 @@
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
+.h2_name h2{
+    text-align: left;
+    font-size: 40px;
+    margin-left: 10%;
+    padding: 20px;
+}
 .signup-section {
-  background: url('cycling\ photos\ .jpeg') center/cover no-repeat;
+  background: url('cycling photos .jpeg') center/cover no-repeat;
   padding: 70px 40px;
   text-align: center;
   position: relative;
@@ -465,7 +472,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   z-index: 0;
 }
 
@@ -484,15 +491,30 @@
   z-index: 1;
 }
 
-.form-group {
+.form-row {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  text-align: left;
+  color: #333;
 }
 
 .form-group input {
-  flex: 1;
   padding: 12px 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -520,3 +542,99 @@
 .submit-btn:hover {
   background-color: #ff5722;
 }
+
+.footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 80px 40px 40px 40px;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:90px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  
+}
+
+.footer-logo {
+  width: 30px;
+  margin-bottom: 10px;
+}
+
+.country-select p{
+  color: #fff;
+  font-size: 94px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  font-size: 50%;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 24px;
+
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 15px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px; 
+}
+
+.footer-logo {
+  width: 34px;
+  height: auto;
+}
+
