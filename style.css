@@ -546,7 +546,7 @@
 .footer {
   background-color: rgb(29, 63, 12);
   color: #f0f0f0;
-  padding: 40px;
+  padding: 100px;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -557,18 +557,24 @@
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 40px;
+  gap: 80px;
 }
-
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
 .footer-column {
   flex: 1 1 180px;
   min-width: 150px;
+  gap:90px;
 }
 
 .footer-country .country-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
+  padding:50px;
+  
 }
 
 .footer-logo {
@@ -589,7 +595,8 @@
 }
 
 .footer-column ul li {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  
 }
 
 .footer-column ul li a {
