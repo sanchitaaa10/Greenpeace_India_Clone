@@ -85,3 +85,106 @@ body {
   padding: 8px 12px;
   color: #888;
 }
+.footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
