@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impact Tracker Dashboard</title>
+  <link rel="stylesheet" href="impact_tracker.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome back, Sanchita 👋</h1>
+    <p class="subtext">Here’s the impact your donations have made:</p>
+
+    <div class="summary">
+      <h2>Total Donated: ₹<span id="totalDonated">0</span></h2>
+      <div class="progress-container">
+        <p>Milestone: ₹10,000 Goal</p>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Recent Impact Updates:</h3>
+    <ul id="impactList" class="impact-list"></ul>
+
+    <div class="share-card">
+      <h4>Your Impact Summary</h4>
+      <p>You’ve helped fund clean water projects, planted 50+ trees, and supported education for 3 children.</p>
+      <button onclick="shareImpact()">📤 Share</button>
+    </div>
+  </div>
+
+  <script src="impact_tracker.js"></script>
+</body>
+</html>

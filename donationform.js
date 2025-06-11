@@ -1,39 +1,46 @@
-// Highlight selected donation amount
-const amountRadios = document.querySelectorAll('input[name="amount"]');
-amountRadios.forEach(radio => {
+
+document.querySelectorAll('input[name="amount"]').forEach(radio => {
   radio.addEventListener('change', () => {
-    amountRadios.forEach(r => r.parentElement.classList.remove('selected'));
+    document.querySelectorAll('.amount-group label').forEach(label => label.classList.remove('selected'));
     radio.parentElement.classList.add('selected');
   });
 });
 
-// Validate form before proceeding
-document.getElementById('donationForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // prevent actual form submission
 
-  // Basic validation
-  const requiredFields = ['firstName', 'lastName', 'email', 'mobile', 'dob', 'pan', 'address', 'ifsc', 'accountType', 'accountNumber'];
-  let valid = true;
-  requiredFields.forEach(id => {
-    const input = document.getElementById(id);
-    if (!input.value.trim()) {
-      input.style.borderColor = 'red';
-      valid = false;
+document.getElementById('donationForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const fields = ['firstName', 'lastName', 'email', 'mobile', 'dob', 'pan', 'address', 'ifsc', 'accountType', 'accountNumber'];
+  let isValid = true;
+
+  fields.forEach(id => {
+    const field = document.getElementById(id);
+    if (!field.value.trim()) {
+      field.style.borderColor = 'red';
+      isValid = false;
     } else {
-      input.style.borderColor = '#ccc';
+      field.style.borderColor = '#ccc';
     }
   });
 
-  const isCitizenChecked = document.getElementById('citizenCheck').checked;
-  if (!isCitizenChecked) {
-    alert('Please confirm you are an Indian citizen and agree to the declaration.');
+  const checkbox = document.getElementById('citizenCheck');
+  if (!checkbox.checked) {
+    alert("Please confirm you're an Indian citizen and agree to the declaration.");
     return;
   }
 
-  if (valid) {
-    alert('Form submitted successfully! (Functionality placeholder)');
-    // Here you could send data to your backend via fetch/AJAX
+  if (isValid) {
+    alert("Form submitted successfully! (This is a placeholder)");
+    
   } else {
-    alert('Please fill out all required fields.');
+    alert("Please fill all required fields.");
   }
+});
+// const saveData = () => {
+//   const firstName = document.getElementById("firstName").value;
+//   const email = document.getElementById("email").value;
+//   localStorage.setItem("donorData", JSON.stringify({ firstName, email }));
+// };
+document.getElementById("donationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thank you! Your donation form was submitted (locally).");
 });

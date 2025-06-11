@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2fdf5;
+  margin: 0;
+  padding: 20px;
+}
+
+.dashboard {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2e7d32;
+  font-size: 28px;
+}
+
+.subtext {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.summary h2 {
+  color: #388e3c;
+}
+
+.progress-container {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: #66bb6a;
+  transition: width 0.6s ease;
+}
+
+.impact-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.impact-list li {
+  background: #e8f5e9;
+  border-left: 5px solid #43a047;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.share-card {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f1f8e9;
+  border: 1px dashed #aed581;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.share-card h4 {
+  margin-bottom: 10px;
+}
+
+.share-card button {
+  padding: 10px 15px;
+  background: #66bb6a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.share-card button:hover {
+  background: #4caf50;
+}
+
+.impact-btn {
+  background-color: #388e3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.impact-btn:hover {
+  background-color: #2e7d32;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+

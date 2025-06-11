@@ -20,10 +20,11 @@
     <nav class="nav-links">
       <a href="publications.html">Publications</a>
       <a href="pressrelease.html">Press Releases</a>
-      <a href="#">Stories</a>
-      <a href="#">Act</a>
-      <a href="#">Explore</a>
+      <!-- <a href="#">Stories</a> -->
+      <!-- <a href="#">Act</a> -->
+      <!-- <a href="#">Explore</a> -->
       <a href="#">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
     </nav>
 
     <div class="nav-right">
@@ -35,6 +36,38 @@
       <input type="text" placeholder="Search">
     </div>
   </header>
+
+
+
+ 
+<button id="openImpactBtn" class="impact-btn">🎁 View My Impact</button>
+
+
+<div id="impactModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeImpactBtn">&times;</span>
+    <h2>🎉 Your Donation Impact</h2>
+    <h3>Total Donated: ₹<span id="popupTotal">0</span></h3>
+
+    <div class="progress-container">
+      <p>Milestone Goal: ₹10,000</p>
+      <div class="progress-bar">
+        <div class="progress" id="popupProgress"></div>
+      </div>
+    </div>
+
+    <ul id="popupImpactList" class="impact-list"></ul>
+
+    <div class="share-card">
+      <h4>📢 Share Your Impact</h4>
+      <p>You’ve supported trees, education, clean water & more!</p>
+      <button onclick="shareImpact()">Share</button>
+    </div>
+  </div>
+</div>
+
+
+
 
   <div class="gallery-container">
     <div class="gallery-slider">
@@ -244,7 +277,7 @@
 <div class="h2_name"><h2>Get action alerts in your inbox</h2></div>
 
 <section class="signup-section">
-  <form class="signup-form">
+  <form class="signup-form" id="signupForm">
     <div class="form-row">
       <div class="form-group">
         <label for="first-name">First name</label>
@@ -277,6 +310,8 @@
     <button type="submit" class="submit-btn">Submit</button>
   </form>
 </section>
+
+
 <footer class="footer">
   <div class="footer-top">
     <div class="footer-country">
@@ -325,6 +360,8 @@
   </div>
 </footer>
 
+
+<script src="script.js"></script>
 </body>
 </html>
 
