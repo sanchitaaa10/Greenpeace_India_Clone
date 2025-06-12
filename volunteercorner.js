@@ -27,3 +27,49 @@ const openBtn = document.getElementById("openFormBtn");
         showStep(currentStep);
       }
     }
+
+
+
+
+
+  function nextStep(step) {
+    const current = document.querySelector('.form-step.active');
+    const inputs = current.querySelectorAll('input, select, textarea');
+    for (const input of inputs) {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+        return;
+      }
+    }
+    current.classList.remove('active');
+    document.getElementById('step' + step).classList.add('active');
+  }
+
+  function prevStep(step) {
+    document.querySelector('.form-step.active').classList.remove('active');
+    document.getElementById('step' + step).classList.add('active');
+  }
+
+  // Handle final submission
+  const form = document.getElementById("registrationForm");
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Check Step 3 validation
+    const current = document.querySelector('.form-step.active');
+    const inputs = current.querySelectorAll('input, select, textarea');
+    for (const input of inputs) {
+      if (!input.checkValidity()) {
+        input.reportValidity();
+        return;
+      }
+    }
+
+    // Replace form with Thank You message
+    const modalContent = document.querySelector(".modal-content");
+    modalContent.innerHTML = `
+      <h2 style="text-align:center; color:green;">Thank you for submitting!</h2>
+      <p style="text-align:center;">We appreciate your interest in volunteering with Greenpeace South Asia.</p>
+    `;
+  });
+

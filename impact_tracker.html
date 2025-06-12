@@ -3,34 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Impact Tracker Dashboard</title>
-  <link rel="stylesheet" href="impact_tracker.css" />
+  <title>Donation Website with Impact Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+    .donation-box {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .impact {
+      margin-top: 30px;
+      background: #e6ffe6;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 20px;
+    }
+    input[type="number"] {
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard">
-    <h1>Welcome back, Sanchita 👋</h1>
-    <p class="subtext">Here’s the impact your donations have made:</p>
+  <div class="donation-box">
+    <h2>Donate Now</h2>
+    <input type="number" id="donationAmount" placeholder="Enter amount (₹)" min="1"/>
+    <br/>
+    <button onclick="makeDonation()">Donate</button>
 
-    <div class="summary">
-      <h2>Total Donated: ₹<span id="totalDonated">0</span></h2>
-      <div class="progress-container">
-        <p>Milestone: ₹10,000 Goal</p>
-        <div class="progress-bar">
-          <div class="progress" id="progress"></div>
-        </div>
-      </div>
-    </div>
-
-    <h3>Recent Impact Updates:</h3>
-    <ul id="impactList" class="impact-list"></ul>
-
-    <div class="share-card">
-      <h4>Your Impact Summary</h4>
-      <p>You’ve helped fund clean water projects, planted 50+ trees, and supported education for 3 children.</p>
-      <button onclick="shareImpact()">📤 Share</button>
+    <div class="impact">
+      <h3>🌟 Impact Tracker</h3>
+      <p>Total Donations: ₹<span id="totalDonation">0</span></p>
+      <p>Total Donors: <span id="totalDonors">0</span></p>
     </div>
   </div>
 
-  <script src="impact_tracker.js"></script>
+  <script>
+    // Initial values (these can be stored in localStorage or a backend in real project)
+    let totalDonation = 0;
+    let totalDonors = 0;
+
+    function makeDonation() {
+      const amount = parseInt(document.getElementById("donationAmount").value);
+      if (!amount || amount < 1) {
+        alert("Please enter a valid donation amount.");
+        return;
+      }
+
+      totalDonation += amount;
+      totalDonors += 1;
+
+      // Update UI
+      document.getElementById("totalDonation").textContent = totalDonation;
+      document.getElementById("totalDonors").textContent = totalDonors;
+
+      // Clear input
+      document.getElementById("donationAmount").value = '';
+    }
+  </script>
 </body>
 </html>
