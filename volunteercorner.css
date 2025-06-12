@@ -264,17 +264,18 @@ button[type="submit"]:hover {
 
 /* Popup form styles */
 .modal {
-      display: block;
-      position: fixed;
-      z-index: 1;
-      padding-top: 20px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.4);
-    }
+  display: none; /* ✅ Hides modal by default */
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
 
     .modal-content {
       background-color: white;
