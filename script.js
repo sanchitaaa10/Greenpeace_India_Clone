@@ -62,5 +62,14 @@ closeBtn.addEventListener("click", () => {
 
 
 function shareImpact() {
-  alert("🎉 Impact summary copied! Ready to share.");
+  // Construct the impact summary string
+  const summary = `🌿 Total Donations: ₹${total} / ₹${goal}\n\nImpact Achieved:\n- ${impactItems.join('\n- ')}`;
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(summary).then(() => {
+    alert("🎉 Impact summary copied! Ready to share.");
+  }).catch(err => {
+    alert("❌ Failed to copy impact summary.");
+    console.error(err);
+  });
 }
