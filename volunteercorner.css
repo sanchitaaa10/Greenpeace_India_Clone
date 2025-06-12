@@ -1,107 +1,102 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  /* margin: 0;
-  padding: 20px; */
 }
 
-
-
-
+/* Navbar */
 .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 32px;
-      background-color: white;
-      border-bottom: 1px solid #ddd;
-      gap: 24px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  gap: 24px;
+}
 
-    .logo img {
-      height: 48px;
-      width: auto;
-    }
+.logo img {
+  height: 48px;
+  width: auto;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      flex: 1;
-      justify-content: center;
-    }
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
 
-    .nav-links a {
-      position: relative;
-      text-decoration: none;
-      font-weight: 600;
-      color: #111;
-      transition: color 0.3s;
-      padding: 6px 4px;
-      font-size: 16px;
-    }
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  transition: color 0.3s;
+  padding: 6px 4px;
+  font-size: 16px;
+}
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0%;
-      height: 3px;
-      background-color: #45c300;
-      transition: width 0.3s ease-in-out;
-    }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 3px;
+  background-color: #45c300;
+  transition: width 0.3s ease-in-out;
+}
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+.nav-links a:hover::after {
+  width: 100%;
+}
 
-    .donate-btn {
-      background-color: #85e135;
-      padding: 12px 36px;
-      border-radius: 6px;
-      color: #111;
-      font-weight: bold;
-      font-size: 17px;
-      text-align: center;
-      text-decoration: none;
-    }
+.donate-btn {
+  background-color: #85e135;
+  padding: 12px 36px;
+  border-radius: 6px;
+  color: #111;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+}
 
-    .donate-btn:hover {
-      background-color: #76cb2f;
-    }
+.donate-btn:hover {
+  background-color: #76cb2f;
+}
 
-    .nav-right {
-      display: flex;
-      align-items: center;
-    }
+.nav-right {
+  display: flex;
+  align-items: center;
+}
 
-    .search-box {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-left: 1px solid #ccc;
-      padding-left: 20px;
-    }
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}
 
-    .search-box i {
-      font-size: 16px;
-      color: #333;
-    }
+.search-box i {
+  font-size: 16px;
+  color: #333;
+}
 
-    .search-box input {
-      border: none;
-      outline: none;
-      font-size: 14px;
-      color: #555;
-      padding: 5px;
-    }
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+  padding: 5px;
+}
 
-
-
-    .modal {
-  display: none; /* Hidden by default */
+/* Modal */
+.modal {
+  display: none;
   position: fixed;
   z-index: 999;
   padding-top: 60px;
@@ -136,6 +131,7 @@ body {
   color: black;
 }
 
+/* Form */
 .form-title {
   margin-bottom: 20px;
   color: #168145;
@@ -165,25 +161,31 @@ body {
   flex: 100%;
 }
 
-.form-group label {
+.form-group label,
+label {
   margin-bottom: 6px;
   font-weight: 600;
 }
 
-input, select {
+input,
+select,
+textarea {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
 }
 
-.button-row {
-  display: flex;
-  justify-content: center;
+.button-row,
+.form-buttons {
+  text-align: center;
   margin-top: 10px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+.form-buttons button {
   padding: 10px 30px;
   background-color: #007bff;
   color: white;
@@ -193,11 +195,33 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.form-buttons button:hover {
   background-color: #0056b3;
 }
 
+.form-step {
+  display: none;
+}
 
+.form-step.active {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row div {
+  flex: 1;
+}
+
+/* Content Blocks */
 .section-container {
   max-width: 1000px;
   margin: auto;
@@ -239,6 +263,7 @@ button[type="submit"]:hover {
   border-radius: 4px;
 }
 
+/* Video Section */
 .video-section {
   display: flex;
   flex-direction: column;
@@ -262,88 +287,8 @@ button[type="submit"]:hover {
   border: none;
 }
 
-/* Popup form styles */
-.modal {
-  display: none; /* ✅ Hides modal by default */
-  position: fixed;
-  z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-
-
-    .modal-content {
-      background-color: white;
-      margin: auto;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 900px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    .form-step {
-      display: none;
-    }
-
-    .form-step.active {
-      display: block;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .form-buttons {
-      text-align: center;
-    }
-
-    .form-buttons button {
-      padding: 10px 20px;
-      margin: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .form-buttons button:hover {
-      background-color: #0056b3;
-    }
-
-    .row {
-      display: flex;
-      gap: 20px;
-    }
-
-    .row div {
-      flex: 1;
-    }
-
-
-
-
-
-
-    .footer {
+/* Footer */
+.footer {
   background-color: rgb(29, 63, 12);
   color: #f0f0f0;
   padding: 100px;
@@ -359,22 +304,24 @@ button[type="submit"]:hover {
   margin: 0 auto;
   gap: 80px;
 }
-.country-divider{
+
+.country-divider,
+.footer-divider {
   border: none;
   border-top: 1px solid #ccc;
   margin: 30px 0 20px 0;
 }
+
 .footer-column {
   flex: 1 1 180px;
   min-width: 150px;
-  gap:90px;
+  gap: 90px;
 }
 
 .footer-country .country-wrapper {
   display: flex;
   align-items: center;
-  padding:50px;
-  
+  padding: 50px;
 }
 
 .footer-logo {
@@ -396,7 +343,6 @@ button[type="submit"]:hover {
 
 .footer-column ul li {
   margin-bottom: 30px;
-  
 }
 
 .footer-column ul li a {
@@ -428,12 +374,6 @@ button[type="submit"]:hover {
   font-size: 18px;
 }
 
-.footer-divider {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 30px 0 20px 0;
-}
-
 .footer-bottom {
   text-align: center;
   font-size: 13px;
@@ -446,4 +386,3 @@ button[type="submit"]:hover {
   color: #ccc;
   text-decoration: underline;
 }
-

@@ -1,309 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="volunteercorner.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="volunteercorner.css" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
+  <header class="navbar">
     <div class="logo">
       <a href="index.html">
-  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
-</a>
-
+        <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+      </a>
     </div>
-
     <nav class="nav-links">
       <a href="publications.html">Publications</a>
       <a href="pressrelease.html">Press Releases</a>
-      <!-- <a href="#">Stories</a> -->
-      <!-- <a href="#">Act</a> -->
-      <!-- <a href="#">Explore</a> -->
       <a href="volunteercorner.html">Volunteer Corner</a>
       <a href="impact_tracker.html">Tracker</a>
     </nav>
-
     <div class="nav-right">
       <a href="donationform.html" class="donate-btn">Donate</a>
     </div>
-
     <div class="search-box">
       <i class="fas fa-search"></i>
       <input type="text" placeholder="Search">
     </div>
   </header>
 
-
-
   <div class="section-container">
-  <div class="block-container">
-    <div class="block">
-      <h2>Get Involved</h2>
-      <img src="getinvolved.jpg" alt="Get Involved Image" />
+    <div class="block-container">
+      <div class="block">
+        <h2>Get Involved</h2>
+        <img src="getinvolved.jpg" alt="Get Involved Image" />
+      </div>
+      <div class="block">
+        <h2>Events And Training</h2>
+        <img src="eventsandtraining.jpeg" alt="Events and Training Image" />
+      </div>
     </div>
-    <div class="block">
-      <h2>Events And Training</h2>
-      <img src="eventsandtraining.jpeg" alt="Events and Training Image" />
+
+    <button class="register-btn" id="openFormBtn">Register Now</button>
+
+    <div class="video-section">
+      <div class="text-video-block">
+        <h3>Human Library: Climate Conversations with Shri Dilip Pandey</h3>
+        <p>
+          Experience a thought-provoking <strong>Human Library session</strong> at Delhi’s 
+          <strong>Museum of Memories</strong>, where Shri Dilip Pandey, Member of the Delhi 
+          Legislative Assembly, shares his insights on the climate crisis. Through impactful storytelling, 
+          he discusses extreme weather patterns and the urgent need for climate action.
+        </p>
+      </div>
+      <div class="text-video-block">
+        <h3>Voices of Change: Inspiring Journeys of Greenpeace Volunteers</h3>
+        <p>
+          Hear directly from the passionate changemakers at Greenpeace India. From hosting engaging 
+          webinars to leading impactful campaigns on the ground, our volunteers have been at the heart 
+          of driving change. Their journeys are filled with dedication, resilience, and inspiring leadership.
+        </p>
+      </div>
     </div>
   </div>
 
-  <button class="register-btn" id="openFormBtn">Register Now</button>
+  <div id="popupForm" class="modal">
+    <div class="modal-content">
+      <h2>Register for Events</h2>
+      <form id="registrationForm">
+        <div class="form-step active" id="step1">
+          <div class="row">
+            <div>
+              <label>Full Name *</label>
+              <input type="text" required />
+            </div>
+            <div>
+              <label>Emergency Contact Number *</label>
+              <input type="tel" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Email *</label>
+              <input type="email" required />
+            </div>
+            <div>
+              <label>Contact Number *</label>
+              <input type="tel" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>State *</label>
+              <select required>
+                <option value="">Select</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+              </select>
+            </div>
+            <div>
+              <label>City *</label>
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Gender *</label>
+              <select required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label>Pincode *</label>
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Age Range *</label>
+              <select required>
+                <option value="">Select</option>
+                <option>18-20</option>
+                <option>21-25</option>
+                <option>26-30</option>
+                <option>30+</option>
+              </select>
+            </div>
+            <div>
+              <label>Occupation *</label>
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="form-buttons">
+            <button type="button" onclick="nextStep(2)">Next</button>
+          </div>
+        </div>
 
-  <div class="video-section">
-    <div class="text-video-block">
-      <h3>Human Library: Climate Conversations with Shri Dilip Pandey</h3>
-      <p>
-        Experience a thought-provoking <strong>Human Library session</strong> at Delhi’s 
-        <strong>Museum of Memories</strong>, where Shri Dilip Pandey, Member of the Delhi 
-        Legislative Assembly, shares his insights on the climate crisis. Through impactful storytelling, 
-        he discusses extreme weather patterns and the urgent need for climate action.
-      </p>
-      
-    </div>
+        <div class="form-step" id="step2">
+          <label>How do you reached us?</label>
+          <div class="row">
+            <div><input type="radio" name="reach" required /> Instagram</div>
+            <div><input type="radio" name="reach" /> Facebook</div>
+            <div><input type="radio" name="reach" /> Email</div>
+            <div><input type="radio" name="reach" /> Direct</div>
+          </div>
 
-    <div class="text-video-block">
-      <h3>Voices of Change: Inspiring Journeys of Greenpeace Volunteers</h3>
-      <p>
-        Hear directly from the passionate changemakers at Greenpeace India. From hosting engaging 
-        webinars to leading impactful campaigns on the ground, our volunteers have been at the heart 
-        of driving change. Their journeys are filled with dedication, resilience, and inspiring leadership.
-      </p>
-      
+          <label>Availability *</label>
+          <div class="row">
+            <div><input type="radio" name="availability" required /> Online</div>
+            <div><input type="radio" name="availability" /> Offline</div>
+            <div><input type="radio" name="availability" /> Both</div>
+          </div>
+
+          <label>Areas of Specialization *</label>
+          <div class="row">
+            <div>
+              <input type="checkbox" required /> Event Management<br>
+              <input type="checkbox" /> Content Management<br>
+              <input type="checkbox" /> Research<br>
+              <input type="checkbox" /> Social Media Management<br>
+              <input type="checkbox" /> Design<br>
+              <input type="checkbox" /> MS Office
+            </div>
+            <div>
+              <input type="checkbox" /> Public Speaking<br>
+              <input type="checkbox" /> Media Management<br>
+              <input type="checkbox" /> Video Editing<br>
+              <input type="checkbox" /> Data Analysis<br>
+              <input type="checkbox" /> Engagement
+            </div>
+            <div>
+              <input type="checkbox" /> Resource Management<br>
+              <input type="checkbox" /> Fieldwork<br>
+              <input type="checkbox" /> Fund Raising<br>
+              Other: <input type="text" />
+            </div>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" onclick="prevStep(1)">Previous</button>
+            <button type="button" onclick="nextStep(3)">Next</button>
+          </div>
+        </div>
+
+        <div class="form-step" id="step3">
+          <label>What are your expectations during your time as a Greenpeace South Asia volunteer? *</label>
+          <textarea rows="4" required></textarea>
+
+          <label>Tell us of yourself and previous volunteering work experience *</label>
+          <textarea rows="4" required></textarea>
+
+          <label>I'm happy for Greenpeace South Asia and its representatives to contact me *</label><br>
+          <input type="radio" name="contactConsent" required> Yes
+          <input type="radio" name="contactConsent"> No
+
+          <div class="form-buttons">
+            <button type="button" onclick="prevStep(2)">Previous</button>
+            <button type="submit">Submit</button>
+          </div>
+          <span class="close-btn">&times;</span>
+        </div>
+      </form>
     </div>
   </div>
-</div>
-
-<!-- <button id="openFormBtn">Open Registration Form</button> -->
-
-  
-<div id="popupForm" class="modal">
-  <div class="modal-content">
-    <h2>Register for Events</h2>
-    <form id="registrationForm">
-      <!-- Step 1 -->
-      <div class="form-step active" id="step1">
-        <div class="row">
-          <div>
-            <label>Full Name *</label>
-            <input type="text" required />
-          </div>
-          <div>
-            <label>Emergency Contact Number *</label>
-            <input type="tel" required />
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label>Email *</label>
-            <input type="email" required />
-          </div>
-          <div>
-            <label>Contact Number *</label>
-            <input type="tel" required />
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label>State *</label>
-            <select required>
-              <option value="">Select</option>
-              <option>Andhra Pradesh</option>
-              <option>Arunachal Pradesh</option>
-              <option>Assam</option>
-              <option>Bihar</option>
-              <option>Chhattisgarh</option>
-              <option>Goa</option>
-              <option>Gujarat</option>
-              <option>Haryana</option>
-              <option>Himachal Pradesh</option>
-              <option>Jharkhand</option>
-              <option>Karnataka</option>
-              <option>Kerala</option>
-              <option>Madhya Pradesh</option>
-              <option>Maharashtra</option>
-              <option>Manipur</option>
-              <option>Meghalaya</option>
-              <option>Mizoram</option>
-              <option>Nagaland</option>
-              <option>Odisha</option>
-              <option>Punjab</option>
-              <option>Rajasthan</option>
-              <option>Sikkim</option>
-              <option>Tamil Nadu</option>
-              <option>Telangana</option>
-              <option>Tripura</option>
-              <option>Uttar Pradesh</option>
-              <option>Uttarakhand</option>
-              <option>West Bengal</option>
-            </select>
-          </div>
-          <div>
-            <label>City *</label>
-            <input type="text" required />
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label>Gender *</label>
-            <select required>
-              <option value="">Select</option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div>
-            <label>Pincode *</label>
-            <input type="text" required />
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label>Age Range *</label>
-            <select required>
-              <option value="">Select</option>
-              <option>18-20</option>
-              <option>21-25</option>
-              <option>26-30</option>
-              <option>30+</option>
-            </select>
-          </div>
-          <div>
-            <label>Occupation *</label>
-            <input type="text" required />
-          </div>
-        </div>
-        <div class="form-buttons">
-          <button type="button" onclick="nextStep(2)">Next</button>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="form-step" id="step2">
-        <label>How do you reached us?</label>
-        <div class="row">
-          <div><input type="radio" name="reach" required /> Instagram</div>
-          <div><input type="radio" name="reach" /> Facebook</div>
-          <div><input type="radio" name="reach" /> Email</div>
-          <div><input type="radio" name="reach" /> Direct</div>
-        </div>
-
-        <label>Availability *</label>
-        <div class="row">
-          <div><input type="radio" name="availability" required /> Online</div>
-          <div><input type="radio" name="availability" /> Offline</div>
-          <div><input type="radio" name="availability" /> Both</div>
-        </div>
-
-        <label>Areas of Specialization *</label>
-        <div class="row">
-          <div>
-            <input type="checkbox" required /> Event Management<br>
-            <input type="checkbox" /> Content Management<br>
-            <input type="checkbox" /> Research<br>
-            <input type="checkbox" /> Social Media Management<br>
-            <input type="checkbox" /> Design<br>
-            <input type="checkbox" /> MS Office
-          </div>
-          <div>
-            <input type="checkbox" /> Public Speaking<br>
-            <input type="checkbox" /> Media Management<br>
-            <input type="checkbox" /> Video Editing<br>
-            <input type="checkbox" /> Data Analysis<br>
-            <input type="checkbox" /> Engagement
-          </div>
-          <div>
-            <input type="checkbox" /> Resource Management<br>
-            <input type="checkbox" /> Fieldwork<br>
-            <input type="checkbox" /> Fund Raising<br>
-            Other: <input type="text" />
-          </div>
-        </div>
-
-        <div class="form-buttons">
-          <button type="button" onclick="prevStep(1)">Previous</button>
-          <button type="button" onclick="nextStep(3)">Next</button>
-        </div>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="form-step" id="step3">
-        <label>What are your expectations during your time as a Greenpeace South Asia volunteer? *</label>
-        <textarea rows="4" required></textarea>
-
-        <label>Tell us of yourself and previous volunteering work experience *</label>
-        <textarea rows="4" required></textarea>
-
-        <label>I'm happy for Greenpeace South Asia and its representatives to contact me *</label><br>
-        <input type="radio" name="contactConsent" required> Yes
-        <input type="radio" name="contactConsent"> No
-
-        <div class="form-buttons">
-          <button type="button" onclick="prevStep(2)">Previous</button>
-          <button type="submit">Submit</button>
-        </div>
-        <span class="close-btn">&times;</span>
-
-      </div>
-    </form>
-  </div>
-</div>
-
-
 
   <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-country">
-      <div class="country-wrapper">
-        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
-        <p class="country-select">India ▼</p>
+    <div class="footer-top">
+      <div class="footer-country">
+        <div class="country-wrapper">
+          <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+          <p class="country-select">India ▼</p>
+        </div>
       </div>
-    
-    </div>
 
-    <div class="footer-column">
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Offices</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">#Careers</a></li>
-        <li><a href="#">Supporter Care</a></li>
-      </ul>
-    </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Offices</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">#Careers</a></li>
+          <li><a href="#">Supporter Care</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-column">
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">POSH Policy</a></li>
-        <li><a href="#">Copyright and Terms</a></li>
-        <li><a href="#">Community Policy</a></li>
-        <li><a href="#">Sitemap</a></li>
-      </ul>
-    </div>
+      <div class="footer-column">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">POSH Policy</a></li>
+          <li><a href="#">Copyright and Terms</a></li>
+          <li><a href="#">Community Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-column social">
-      <p>Follow us</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="footer-column social">
+        <p>Follow us</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <hr class="footer-divider" />
+    <hr class="footer-divider" />
 
-  <div class="footer-bottom">
-    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+    </div>
+  </footer>
 
+  <script src="volunteercorner.js"></script>
 
-<script src="volunteercorner.js"></script>
-    
 </body>
 </html>
