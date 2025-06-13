@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best of Greenpeace ships 2023</title>
+  <style>
+
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.greenpeace-section {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.breadcrumb span {
+  color: green;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.share-icons {
+  margin: 10px 0;
+}
+.share-icons i {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.image-section {
+  margin-top: 30px;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.caption {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+  <section class="greenpeace-section">
+    
+
+    <h1>Best of Greenpeace ships 2023</h1>
+    <div class="meta">
+      <p><strong>Sudhanshu Malhotra</strong> | December 19, 2023 | <i class="fa fa-comment"></i> 7 Comments</p>
+    </div>
+
+    <div class="share-icons">
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa fa-envelope"></i>
+    </div>
+
+    <div class="content">
+      <p>Greenpeace ships have been the beacon of hope for global environmental justice. They have travelled continuously across seas, documenting the vast diversity of the biodiversity, creatures and people since the first voyage 52 years ago.</p>
+
+      <p>This year, our ships have been a part of engaging campaigns all around the globe. In the Pacific, they visited communities at the forefront of climate change to participate in non-violent direct action confronting giant multinational fossil fuel corporations. Our ships have always been a source of pride and inspiration, a continuing support across the shores.</p>
+
+      <p>These images below represent a small selection of our brave 2023 to showcase places our ships have traversed to and dropped their anchors to stand up for Mother Earth.</p>
+    </div>
+
+    <div class="image-section">
+      <img src="ship1.jpg" alt="Rainbow Warrior arrival" />
+      <p class="caption">
+        Arrival ceremony for the iconic Greenpeace vessel, the Rainbow Warrior. The Rainbow Warrior arrives in Port Vila, Vanuatu after a nine-day voyage from Cairns, Australia, with climate activists, Pacific campaigners and First Nations leaders.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="ship2.jpg" alt="Stop Drilling Banner Protest" />
+      <p class="caption">
+        In a final stand, protestors climbed the platform's 125m flare boom, and waved a banner saying “Stop drilling. Start paying.” Meanwhile the fellow activists led by the Greenpeace Southeast Asia executive director, Yeb Sano, on board Greenpeace Nordic's Benlder Tanker Takanor...
+      </p>
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
