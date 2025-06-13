@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Change Act</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .form-section {
+      flex: 1 1 300px;
+      max-width: 350px;
+      padding: 20px;
+    }
+    .form-section h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .form-section input,
+    .form-section select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-section button {
+      background-color: #f04e23;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+    .form-section p {
+      font-size: 10px;
+      color: #666;
+    }
+
+    .content-section {
+      flex: 2 1 500px;
+      padding: 20px;
+    }
+    .content-section h2 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .content-section img {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+    .content-section p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .content-section .bold {
+      font-weight: bold;
+    }
+    .content-section .impact-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f6f6f6;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .impact-item {
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #d32f2f;
+      flex: 1 1 120px;
+      margin: 10px;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+      font-size: 14px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+
+
+    <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+  <div class="container">
+    <div class="form-section">
+      <h3>Join the digital revolution to call for a Climate Change Act in India</h3>
+      <input type="text" placeholder="First Name*" required>
+      <input type="text" placeholder="Last Name*" required>
+      <input type="email" placeholder="Email*" required>
+      <input type="tel" placeholder="Phone Number*" required>
+      <select required>
+        <option value="">Select an age group.*</option>
+        <option value="below18">Below 18</option>
+        <option value="18-30">18 - 30</option>
+        <option value="30-45">30 - 45</option>
+        <option value="above45">45 and above</option>
+      </select>
+      <select required>
+        <option value="">City*</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+        <option value="bangalore">Bangalore</option>
+        <!-- Add more cities -->
+      </select>
+      <p>Greenpeace India requires your contact information to share updates about this campaign and others. You are unsubscribing from these communications at any time. For information on how to unsubscribe, as well as our privacy practices and commitment to protecting your privacy, please review our <a href="#">Privacy Policy</a>.</p>
+      <button>Add My Name</button>
+    </div>
+    <div class="content-section">
+      <h2>Climate change is a serious threat</h2>
+      <img src="climate1.webp" alt="Flooded street image" >
+      <p>As of September 2023, India experienced extreme weather events like coldwaves, heatwaves, floods and others for 235 days. This qualifies for over <span class="bold">86% of the days being subjected to devastating climate emergencies</span>. This is just the beginning.</p>
+      <p>According to IPCC (Intergovernmental Panel on Climate Change) reports, extreme weather will become increasingly intense and frequent. <span class="bold">The damage done to our ecosystems will be irreversible.</span></p>
+      <p>We are in a race against time to reverse the impact of climate change. For this, we need to protect planet Earth.</p>
+
+      <div class="impact-box">
+        <div class="impact-item">
+          <div>2,923</div>
+          people lost<br> their lives.
+        </div>
+        <div class="impact-item">
+          <div>1.84 <span style="font-size: 10px;">million</span></div>
+          hectares (ha) of<br> crop area were<br> affected.
+        </div>
+        <div class="impact-item">
+          <div>80,563</div>
+          homes were<br> destroyed.
+        </div>
+        <div class="impact-item">
+          <div>92,519</div>
+          animals died.
+        </div>
+      </div>
+
+      <div class="section-title">What do we need to protect our home?</div>
+      <p>A Climate Change Act that will integrate different laws and policies to <span class="bold">protect its biodiversity and its people</span>.</p>
+
+      <p>The Climate Change Act should ensure the following:</p>
+      <ul>
+        <li>Ensure clear targets and set timelines to achieve just legally binding energy transitions</li>
+        <li>Adequate provisions for adapting to the impacts of climate change and building resilience among vulnerable communities.</li>
+        <li>Include mechanisms to hold polluting corporations accountable.</li>
+      </ul>
+
+      <p class="section-title">Our survival depends on it.</p>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+</body>
+</html>
