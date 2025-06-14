@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delhi Rising | Greenpeace India</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #45c300;
+}
+
+.search {
+  color: #333;
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #f857a6, #ff5858, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #fffc00;
+  font-weight: bold;
+}
+
+/* Slogan Section */
+.slogan {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.slogan h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.slogan h2 span {
+  color: #f0f;
+}
+
+.slogan p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.colored {
+  color: #f0f;
+  font-weight: bold;
+}
+
+.heart {
+  font-weight: bold;
+  font-size: 20px;
+}
+.heat-matter-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.heat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heat-card {
+  background: #fff;
+  text-align: left;
+  padding: 10px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.heat-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.heat-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.heat-card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Animation states */
+.animate-left {
+  transform: translateX(-100px);
+}
+.animate-right {
+  transform: translateX(100px);
+}
+
+.show {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.delhi-rising-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  perspective: 1000px;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.delhi-rising-section.flip-in {
+  transform: rotateY(0);
+  opacity: 1;
+}
+
+.delhi-rising-content {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 30px;
+}
+
+.delhi-rising-content h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.delhi-rising-content span {
+  display: block;
+  font-weight: 900;
+}
+
+.delhi-rising-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.delhi-rising-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.delhi-rising-image img {
+  width: 100%;
+  border-radius: 6px;
+}
+.media-gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.media-gallery-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-heading {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.media-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.media-gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #17410D;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 80px 40px 0;
+}
+
+.footer-top {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.globe-icon {
+  margin-right: 8px;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+hr {
+  border: 0.5px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.social-media p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* white icons */
+  transition: transform 0.3s;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">GREENPEACE</div>
+    <div class="search">🔍 Search</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <img src="delhirisinglogo.png" alt="Delhi Rising Logo" class="hero-logo">
+      <p class="hero-text">
+        The heat returns with a vengeance, wreaking havoc on those least responsible for its fury. 
+        It will push limits and test resilience. But this time, Delhiites aren’t just enduring the crisis—
+        <span class="highlight"> they are taking action. They are RISING.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="slogan">
+    <h2>
+      THE TEMPERATURE MAY BE RISING,<br>
+      <span>BUT SO ARE WE!</span>
+    </h2>
+    <p>
+      Delhi Rising is a people-powered campaign to fight extreme heat with 
+      <span class="colored">care, courage, and community</span>—and you can start the movement in your city, 
+      one act of relief at a time.
+    </p>
+    <p class="heart">Kyuki, Dil Hai Toh Dilli Hai! ❤️</p>
+  </section>
+
+<section class="heat-matter-section">
+  <h2 class="section-title">WHY DOES HEAT MATTER?</h2>
+  <div class="heat-grid">
+    
+    <div class="heat-card animate-left">
+      <img src="1image.jpg" alt="Health">
+      <h3>Health</h3>
+      <p>Heat can be DEADLY. India recorded over 40,000 suspected heatstroke cases in 2024, yet many heat deaths go uncounted—because doctors lack clear guidelines. Each death caused due to heat, human and non-human, is a preventable one.</p>
+    </div>
+
+    <div class="heat-card animate-right">
+      <img src="2image.jpg" alt="Water">
+      <h3>Water</h3>
+      <p>Water is Survival. Over 100 million Indians lack access to safe drinking water, making extreme heat even deadlier. Dehydration can cause dizziness, organ failure, and death—yet relief is out of reach for many. We’re setting up hydration centers across the city to ensure lifesaving water access!</p>
+    </div>
+
+    <div class="heat-card animate-left">
+      <img src="3image.jpg" alt="Informal Sector">
+      <h3>Informal Sector</h3>
+      <p>Gig workers, street vendors, and delivery riders have no choice but to work under a burning sky. No water, no shade, no respite. We’re pushing for policies that safeguard workers from extreme heat—because no one should risk their life for a paycheck.</p>
+    </div>
+
+    <div class="heat-card animate-right">
+      <img src="4image.webp" alt="Biodiversity">
+      <h3>Biodiversity</h3>
+      <p>Birds dropping mid-flight, monkeys drowning in search of water, stray dogs collapsing from heat exhaustion—Delhi’s wildlife is in crisis. The urgency is clear. We must act to protect those who cannot protect themselves.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="delhi-rising-section flip-on-scroll">
+  <div class="delhi-rising-content">
+    <h2>How are Delhiites Showing up? <span>#DelhiRising</span></h2>
+    <p>
+      While we at Greenpeace hold the government accountable, advocating for notifying heatwaves as a national disaster so appropriate mitigation and adaptation funds are made available to states—we must all act—supporting efforts that protect outdoor and gig workers, leaving water out for birds and animals, checking in on neighbours, and standing in solidarity with those on the frontlines of this crisis.
+    </p>
+  </div>
+  <div class="delhi-rising-image">
+    <img src="5image.jpg" alt="Delhi Rising">
+  </div>
+</section>
+
+<section class="media-gallery-section fade-on-scroll">
+  <h2 class="gallery-heading">Media Gallery</h2>
+  <div class="media-gallery-grid">
+    <img src="image2.jpg" alt="Gallery 1">
+    <img src="image3.jpg" alt="Gallery 2">
+    <img src="image4.jpg" alt="Gallery 3">
+    <img src="image5.jpg" alt="Gallery 4">
+    <img src="image11.jpg" alt="Gallery 5">
+    <img src="image17.jpg" alt="Gallery 6">
+    <img src="image8.jpg" alt="Gallery 7">
+    <img src="image10.jpg" alt="Gallery 8">
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="country">
+      <span class="globe-icon">🌐</span> India <span class="arrow">▼</span>
+    </div>
+    <hr />
+    <div class="social-media">
+      <p>Follow us</p>
+      <div class="icons">
+       <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+       <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+ 
+  <script>
+  // Intersection Observer for scroll animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  const cards = document.querySelectorAll('.heat-card');
+  cards.forEach(card => observer.observe(card));
+
+  const flipSection = document.querySelector('.flip-on-scroll');
+
+  const flipObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        flipSection.classList.add('flip-in');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (flipSection) {
+    flipObserver.observe(flipSection);
+  }
+
+  const fadeSection = document.querySelector('.fade-on-scroll');
+
+  const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        fadeSection.classList.add('fade-in');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (fadeSection) {
+    fadeObserver.observe(fadeSection);
+  }
+</script>
+
+</body>
+</html>
