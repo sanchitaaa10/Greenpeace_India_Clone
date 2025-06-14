@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>who we are !</title>
+    <style>
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+.who-we-are-section {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+.greenpeace {
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 40px;
+  color: #111;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #007B55;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.core-value-card {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.core-value-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.core-value-card.wide {
+  grid-column: span 2;
+}
+
+
+
+.footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+<section class="who-we-are-section">
+    <p class="greenpeace">Greenpeace</p>
+    <h1>Who we are</h1>
+
+    <p>
+      Around the globe, we are standing up for our communities, and we are holding governments and corporations accountable. Our Planet – a pale blue dot on the vast canvas of the universe, is fast approaching a point of no return. In the current world order, materialism supersedes human values, economy is more treasured than ecology and profits are prioritized over people. This ceaseless demand for more is pushing our soil, air, water, food, forests and climate closer to an inevitable collapse.
+    </p>
+    <p>
+      Greenpeace India exists because of activists, supporters, donors and volunteers who believe in taking collective action for the environment. Our planet needs us more than ever – individuals, communities and groups who have the power to shift the paradigm. Greenpeace India does not accept donations from governments or corporations, and relies on the donations of close to 56,000 Indian citizens to fund our campaign work.
+    </p>
+    <p>
+      In addition we are supported by a national network of Indian volunteers as well as 7.5 lakh online and 19 lakh mobile activists (all figures March 2017). As of March 2017, as part of our efforts to strongly focus our work on climate change and sustainable agriculture Greenpeace India is undergoing an important restructuring.
+    </p>
+    <p>
+      For several years now, we have been supported by an able and committed team involved with raising public awareness on environmental issues and raising funds for the organisation. Over the years, this team has helped us inspire more than 3,00,000 individual supporters to join our mission and help us stay financially stable and independent.
+    </p>
+    <p>
+      Under our new restructured model these critical functions have now been outsourced. We have contracted <a href="#">Direct Dialogue Initiatives India Pvt. Ltd<sup>©</sup></a> (DDII) whose mission is to raise funds ethically for environmental and social causes.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      We believe optimism is a form of courage. We believe that a billion acts of courage can spark a brighter tomorrow. To that end we model courage, we champion courage, we share stories of courageous acts by our supporters and allies, we invite people out of their comfort zones to take courageous action with us, individually in their daily lives, and in community with others who share our commitment to a better world. A green and peaceful future is our quest. The heroes of our story are all of us who believe that better world is not only within reach, but being built today.
+    </p>
+
+    <h2>Core Values</h2>
+    <div class="core-values-grid">
+
+      <div class="core-value-card">
+       
+        <h3>Core Values</h3>
+        <p>Greenpeace uses non-violent creative action to pave the way towards a greener, more peaceful world, and to confront the systems that threaten our environment.</p>
+       
+      </div>
+
+      <div class="core-value-card">
+        
+        <h3>History</h3>
+        <p>In 1995, a group of activist friends came together in Delhi with an idea that took shape into a powerful movement. One that became the building block for Greenpeace India.</p>
+        
+      </div>
+
+      <div class="core-value-card">
+       
+        <h3>FAQ’s</h3>
+        <p>Are there burning questions in your head about us and/or the work we do that needs answering?</p>
+        
+      </div>
+
+      <div class="core-value-card">
+        
+        <h3>Our Finances</h3>
+        <p>We believe in operating transparently and using the resources of committed individuals efficiently.</p>
+        
+      </div>
+
+      <div class="core-value-card wide">
+        
+        <h3>Annual Reports</h3>
+        <p>Greenpeace India is proud to be part of a global network of independent Greenpeace organisations and we are happy to report back on our work.</p>
+       
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+
+    
+</body>
+</html>

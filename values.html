@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Values</title>
+    <style>
+
+
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+
+
+.values-section {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+.values-section h2 {
+  font-size: 2.5rem;
+  color: #064420;
+  margin-bottom: 10px;
+}
+
+.values-section h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-top: 40px;
+}
+
+.values-section h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 30px;
+}
+
+.values-section p {
+  margin: 10px 0;
+}
+
+.values-section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.values-section ul li {
+  margin-bottom: 8px;
+}
+
+.values-section strong {
+  font-weight: bold;
+}
+
+.values-section em {
+  font-style: italic;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+.footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+<section class="values-section">
+  <h2>Our values</h2>
+  <p>Greenpeace’s cornerstone principles and core values are reflected in all our environmental campaign work. They guide whatever we do and wherever we do it.</p>
+
+  <h3>Our Mission</h3>
+  <p>Greenpeace is an independent campaigning organisation, which uses non-violent, creative confrontation to expose global environmental problems, and to force the solutions which are essential to a green and peaceful future.</p>
+  <p>Greenpeace’s goal is to ensure the ability of the earth to nurture life in all its diversity.</p>
+  <p>Therefore Greenpeace seeks to:</p>
+  <ul>
+    <li><strong>protect</strong> biodiversity in all its forms</li>
+    <li><strong>prevent</strong> pollution and abuse of the earth’s ocean, land, air and fresh water</li>
+    <li><strong>end</strong> all nuclear threats</li>
+    <li><strong>promote</strong> peace, global disarmament and non-violence</li>
+  </ul>
+
+  <h3>Our core values</h3>
+  <ul>
+    <li>We <strong>‘bear witness’</strong> to environmental destruction in a peaceful, non-violent manner;</li>
+    <li>We use <strong>non-violent</strong> confrontation to raise the level and quality of public debate;</li>
+    <li>In <strong>exposing threats</strong> to the environment and finding solutions we have no permanent allies or adversaries;</li>
+    <li>We ensure our <strong>financial independence</strong> from political or commercial interests;</li>
+    <li>We <strong>seek solutions</strong> for, and promote open, informed debate about society’s environmental choices.</li>
+  </ul>
+  <p>In developing our campaign strategies and policies we take great care to reflect our fundamental respect for democratic principles and to seek solutions that will promote global social equity.</p>
+
+  <h3>Fundraising principles</h3>
+  <p>Greenpeace’s worldwide activities are funded almost entirely by donations from individuals around the world, and by private foundation grants. For several years now, we have been supported by an able and committed team involved with raising public awareness on environmental issues and raising funds for the organisation. Over the years, this team has helped us inspire more than 3,50,000 individual supporters to join our mission and help us stay financially stable and independent. Under our new restructured model these critical functions have now been outsourced. We have contracted Direct Dialogue Initiatives India Pvt. Ltd (<strong>DDII</strong>) whose mission is to raise funds ethically for environmental and social causes.</p>
+
+  <p>Greenpeace offices actively solicit funds to maximise long-term income to enable the organisation to achieve its global mission. The methods we use to raise funds comply with the professional codes of conduct and accepted good practice promoted by fundraising, marketing and advertising institutes in the countries we operate within. Greenpeace works actively to ensure transparency and public accountability in its campaigning, fundraising and financial management practices.</p>
+
+  <p>In raising funds, we accurately describe our activities and needs. Our policies and practices ensure that donations further our organisation’s mission. As a matter of policy, we do not seek or accept funding from governments, corporations, political parties or multi-national governmental bodies such as the United Nations or the European Community, as this could compromise our independent stands with regard to the environmental issues we represent. We reserve the right to refuse private donations that may compromise our independence, integrity or deflect from our campaign priorities, and large donations are screened for this purpose.</p>
+
+  <h4>Fundraising Costs</h4>
+  <p>Greenpeace worldwide works to maintain a proper balance between costs, revenue and quality of expenditure, and to keep fundraising costs to an acceptable percentage of revenue.</p>
+
+  <h3>Transparency and Accountability</h3>
+  <p><em>Accountability Charter</em> for International Non-Governmental Organizations</p>
+
+  <p>International Non Governmental Organisations (NGOs) play an increasingly influential role in shaping global policies. Global public opinion surveys show higher trust in NGOs than in government and business. At the same time the nonprofit sector is coming under closer scrutiny, both from those who want it to flourish and those who seek to curtail NGO activities.</p>
+
+  <p>A group of international NGOs, including Greenpeace International, have come together to demonstrate that they deeply value public trust, do not take it for granted and are committed to sustaining and deepening it by ensuring transparency, and accountability for their operations. In June 2006 the NGO’s publicly launched and endorsed the first global Accountability Charter for the non-profit sector.</p>
+
+  <p>The Accountability Charter sets out core values and operating principles for international NGOs. The Charter covers the areas of good governance and management; and fundraising and multi-stakeholder engagement. It also makes specific reference to respect for universal principles (such as the Universal Declaration of Human Rights), independence, responsible advocacy, effective programmes, non-discrimination, transparency and ethical fundraising.</p>
+
+  <p>This initiative builds on individual, national and sectoral initiatives taken to set standards of NGO accountability and codes of conduct. All NGOs are subject to national regulations within the countries in which they operate. The International Non-Governmental Organisations Accountability Charter is the first such initiative to set out international, cross-sector standards for the non-profit sector. All international NGOs – across different sectors – are invited to sign-up to the Accountability Charter. The organisations that, at present, actively endorse the Charter:</p>
+
+  <ul>
+    <li>ActionAid International</li>
+    <li>Amnesty International</li>
+    <li>CIVICUS World Alliance for Citizen Participation</li>
+    <li>Greenpeace International</li>
+    <li>Oxfam International</li>
+    <li>World YWCA</li>
+  </ul>
+</section>
+
+
+
+
+    <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+    
+</body>
+</html>

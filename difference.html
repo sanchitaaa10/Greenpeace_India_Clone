@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differences that we make</title>
+    <style>
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+
+.difference-section {
+  max-width: 800px;
+  margin: auto;
+}
+
+.greenpeace {
+  color: green;
+  font-weight: bold;
+}
+
+.year, .footer-year {
+  color: #777;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+h2, h3 {
+  color: #111;
+  margin-top: 30px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.full-width-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+.solidarity-images {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.solidarity-images img {
+  width: 49%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+    .footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+<section class="difference-section">
+    <p class="greenpeace">Greenpeace</p>
+    <h1>The Difference We Make</h1>
+    <p class="year">2020</p>
+
+    <h2>Clean Air attributed to COVID Lockdown</h2>
+    <img src="d1.jpg" alt="Clean air during lockdown" class="full-width-image">
+
+    <p>
+      Greenpeace India’s <a href="#">analysis</a> of Central Pollution Control Board (CPCB) data revealed large-scale reduction in air pollutant concentration during the first ten days of the lockdown period. PM 2.5 concentration in Delhi-NCR has reduced significantly by 55% to 67%.
+    </p>
+
+    <p>
+      In May same year, Greenpeace’s new <a href="#">analysis</a> of CPCB data revealed levels of two major air pollutants PM2.5 and NO2 reduced significantly in Chennai, Bangalore and Hyderabad. In this analysis, data from April 2020, has been compared with the April 2019 data. In Chennai, the average concentration of PM2.5 reduced by 55.56%, and the concentration of NO2 reduced by 23.86% in comparison to 2019. Similarly, in Bangalore, the average concentration of PM2.5 has reduced by 51.57% and NO2 reduced by 64.02%. Whereas, in Hyderabad, the average concentration of PM2.5 reduced by 18.35% only and NO2 reduced by 63.99%.
+    </p>
+
+    <h3>Economic Cost of Air (2020)</h3>
+    <p>
+      A report, first of its own kind, from Greenpeace Southeast Asia estimated the global cost of air pollution from fossil fuels to be around US$2.9 trillion, or 3.3% of the world’s GDP annually. According to the report, India was estimated to bear 10.7 lakh crore (US$150 billion), or 5.4% of India’s GDP annually, the third highest costs from fossil fuel air pollution worldwide. China Mainland with US$900 billion bears the highest costs followed by the United States with US$600 billion and India.
+    </p>
+
+    <h3>Indian Medical Association writes to Environment Minister (2020)</h3>
+    <p>
+      Indian Medical Association (IMA) <a href="#">endorsed</a> Greenpeace India’s clean air recommendations and wrote to the Environment Minister urging immediate intervention. IMA in its letter expressed grave concerns on the worsening air quality levels in the country. In the letter, addressed to Mr. Prakash Javadekar, Minister of Environment, Forests and Climate Change, IMA called ‘clean air as the principal prerequisite to sustain healthy lives of people.’ It also demanded the government to include all the non-attainment cities in the National Clean Air Programme (NCAP) and also increase the number of air quality monitoring stations across the country.
+    </p>
+
+    <h3>Green Recovery (2020)</h3>
+    <p>
+      The Covid-19 crisis exposed the systemic flaws and inequality in our society, at a time when India is also facing many environmental crises. If we continue with business as usual once the lockdown ends, we are surely headed for a disaster. Air pollution will increase, water bodies will deteriorate, our food system will remain broken and the biodiversity that helped us survive the worst isolation will disappear.
+    </p>
+    <p>
+      In considering the stimulus packages needed for rapid and sustained economic and social recovery, it is time to make a conscious decision whether we want to move in a direction that takes us back to the old normal or move towards a better future? A choice has to be made between a system that has been exposed as unviable and a future that puts people before nature, which leads us to an economically and ecologically just, sustainable and resilient future. A future that ensures equality and justice for all. A future that has hope for people and well-being for all as an integral to it.
+    </p>
+
+    <p>
+      Greenpeace prepared the Green recommendations with over 28,000 citizens of India endorsing the same. <a href="#">Here</a> are the key areas for action for the Government of India to ensure inclusive, sustainable, and socially just recovery from this crisis towards better.
+    </p>
+
+    <h3>Towards strengthening Circles of Solidarity (2020)</h3>
+    <div class="solidarity-images">
+      <img src="d2.jpg" alt="Circles of Solidarity 1">
+   
+    </div>
+    <p>
+      During the Covid-19 pandemic spread, various groups shouldered the responsibility of procuring sustainable food from small and marginal farmers and distributing them among jobless workers, thus creating a web of Circles of Solidarity during the lockdown. These groups also participated in getting endorsements for the Green Recommendations which was later submitted to the Niti Aayog in November, 2020.
+    </p>
+    <p>
+      The campaign has been partnering with government livelihoods programmes on board in helping farmers for adopting organic farming and improving nutritional security through organic kitchen gardens. In a programme called #GrowWith Nature, over 150 small and marginal women farmers of Jamui District are being trained in ecological farming practices and conservation and production of heirloom seeds. Greenpeace is encouraging women farmers to grow over 16 types of nutrition rich seasonal vegetables and uncultivated/forest food using open pollinated seeds. Through this activity farming families are getting organically grown diverse food besides developing decentralised native seed banks.
+    </p>
+
+    <p class="footer-year">2019</p>
+  </section>
+
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+
+    
+</body>
+</html>

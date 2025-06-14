@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .article-section {
+        .hydration-hero-section {
+  font-family: 'Segoe UI', sans-serif;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
   padding: 30px 20px;
+  line-height: 1.7;
+  background: #fff;
 }
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 .navbar {
       display: flex;
       align-items: center;
@@ -100,19 +106,20 @@
       padding: 5px;
     }
 
-.breadcrumbs {
-  color: #4caf50;
+
+.meta .category {
+  color: green;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.title {
+.meta .title {
   font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
-.meta {
+.meta .author {
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
@@ -126,34 +133,43 @@
   cursor: pointer;
 }
 
-.image-container {
+.poster img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.audio-players {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.audio-players div {
   text-align: center;
-  margin: 20px 0;
 }
 
-/* .main-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-} */
-
-.audio-player {
-  margin: 20px 0;
+.story-text p {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 16px;
 }
 
-.article-content p {
-  margin-bottom: 20px;
-}
-
-.hashtag {
+.hashtag-btn {
+  background-color: #cce5d3;
+  color: #007b33;
   font-weight: bold;
-  color: #1b5e20;
-  background-color: #e6f5e6;
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 5px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
 }
-
 .footer {
   background-color: rgb(29, 63, 12);
   color: #f0f0f0;
@@ -259,11 +275,12 @@
 }
 
 
+
     </style>
 </head>
 <body>
 
-     <header class="navbar">
+    <header class="navbar">
     <div class="logo">
       <a href="index.html">
   <img src="greenpeacelogo.png" alt="Greenpeace Logo">
@@ -288,46 +305,59 @@
     </div>
   </header>
 
-    
-    <section class="article-section">
-    <div class="breadcrumbs">Story > Greenpeace</div>
-    <h1 class="title">मिनी सीरीज: हाईड्रेशन हीरो शानू की कहानी</h1>
-    <div class="meta">
-      <span>ग्रीनपीस इंडिया</span> |
-      <span>June 13, 2025</span> |
-      <span>0 Comments</span>
-    </div>
+
+    <section class="hydration-hero-section">
+  <div class="meta">
+    <p class="category">Story > Greenpeace</p>
+    <h1 class="title">Mini series: The story of Hydration Hero Savitri and Radha</h1>
+    <p class="author">Greenpeace India<br>June 5, 2025 • 0 Comments</p>
     <div class="social-icons">
-      <button>🔗</button>
-      <button>📱</button>
+      <button>🟢</button>
+      <button>📘</button>
+      <button>✖️</button>
       <button>✉️</button>
     </div>
+  </div>
 
-    <div class="image-container">
-      <img src="shanu.webp" alt="Shanu" class="main-image" height="100%" widht="100%">
-    </div>
+  <div class="poster">
+    <img src="article2.webp" alt="Savitri and Radha Poster">
+  </div>
 
-    <div class="audio-player">
+  <div class="audio-players">
+    <div>
+      <p><strong>Audio story of Savitri</strong></p>
       <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        आपका ब्राउज़र ऑडियो टैग को सपोर्ट नहीं करता है।
+        <source src="savitri-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
       </audio>
     </div>
-
-    <div class="article-content">
-      <p>सुंदर नगरी के कबूतर चौक पर सुबह 7 बजे से एक आवाज़ गूंजने लगती है, “लो स्टेरिंग ठीक करवा लो, बर्फ मिल जाएगी!” ये आवाज़ है शानू भाई की, जो पिछले 24–25 साल से यहीं पर गाड़ी स्टेरिंग के पुरजे और बर्फ बेचने का काम करते हैं। पहली नज़र में थोड़े खड़ूस लग सकते हैं, लेकिन मोहल्ले में हर कोई जानता है कि मदद के लिए सबसे
-         पहले दौड़ने वाले शख्स वही हैं। सब उन्हें स्नेह से ‘शानू भाई’ कहकर बुलाते हैं।</p>
-      <p>2020 में शानू भाई की दुकान के पास एक प्याऊ लगाया गया था। लेबर चौक पर मजदूरी के इंतज़ार में बैठने वाले मज़दूरों के लिए यह प्याऊ राहत की तरह था। शुरू में कुछ दिन पानी आया, लोग प्यास बुझाते रहे। लेकिन धीरे-धीरे प्याऊ बदहाल होता गया—कभी गंदा पानी, कभी बिल्कुल पानी नहीं, कभी महीनों सफाई नहीं। लोगों ने वहाँ से पानी पीना बंद कर दिया। शानू भाई को यह बात चुभी। उन्होंने पार्षद कार्यालय में शिकायत भी की, लेकिन कोई कार्रवाई नहीं हुई। तब उन्होंने खुद इसे दोबारा चालू करने का निर्णय लिया।
-
-</p>
-      <p>अपनी रोज़ की ₹400-₹500 की मजदूरी में से पैसे बचाकर उन्होंने प्याऊ की सफाई करवाई, मोटर का डायरेक्ट कनेक्शन लगवाया और अब हर 15-20 दिन में खुद ही टंकी साफ़ करवाते हैं। लगभग ₹250-₹300 हर बार खर्च होता है, लेकिन वो कभी किसी से मदद नहीं मांगते। उनका कहना है, “अगर मैं खुद दिनभर धूप में बर्फ बेचकर जी रहा हूँ, तो सोचिए वो मज़दूर कितना तड़पते होंगे, जिनके पास न पैसा है न सुविधा। जब प्याऊ में पानी नहीं होता, मुझे लगता है जैसे सबकी प्यास मेरी अपनी बन गई हो।”</p>
-      <p>उनके अपने घर में भी जिम्मेदारियाँ कम नहीं हैं—बच्चों की पढ़ाई, राशन, रोज़मर्रा का खर्च—किन्तु फिर भी वो इस काम को प्राथमिकता देते हैं। वे कहते हैं, “मैं रहूं या न रहूं, लेकिन ये प्याऊ बंद नहीं होना चाहिए। ये सिर्फ पानी नहीं, लोगों की राहत है, इज़्ज़त है।”</p>
-      <p class="hashtag">#DelhiRising</p>
+    <div>
+      <p><strong>Audio story of Radha</strong></p>
+      <audio controls>
+        <source src="radha-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
-  </section>
+  </div>
+
+  <div class="story-text">
+    <p>In the narrow lanes of Sunder Nagri, near Bus Stand No. 205, live two spirited women, Savitri ji and Radha ji...</p>
+    <p>Over the years, they’ve become the backbone of their neighbourhood, campaigning for covered drains, safe roads, and clean surroundings...</p>
+    <p>But they didn’t stop there.</p>
+    <p>At the bus stand, they planted two trees... placed a <strong>matka</strong> of drinking water outside their home...</p>
+    <p>They clean and refill it every morning and evening... Even the local kids help guard the matka.</p>
+    <p>“We don’t have much,” says Radha, “but no one should stay thirsty just because they can’t afford a bottle of water.”</p>
+    <p>“All I know is how to spin thread,” laughs Savitri, “but society runs on a thread too, doesn’t it?”</p>
+    <p>They haven’t studied social work... But their work is its own kind of school...</p>
+    <p>Now, when people pass by their home, they pause... These women... have made their corner of the city a little softer, a little kinder.</p>
+    <p><strong>This is the real Delhi Rising.</strong></p>
+  </div>
+
+  <button class="hashtag-btn">#DelhiRising</button>
+</section>
 
 
-  <footer class="footer">
+<footer class="footer">
   <div class="footer-top">
     <div class="footer-country">
       <div class="country-wrapper">
@@ -374,5 +404,6 @@
     <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
   </div>
 </footer>
+    
 </body>
 </html>
