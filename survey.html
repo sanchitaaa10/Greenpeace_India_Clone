@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Heat Survey</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #fbd786, #f7797d);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.image-section {
+  flex: 1;
+  background-color: #ccc;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  flex: 1;
+  padding: 2rem;
+}
+
+.question {
+  display: none;
+}
+
+.question.active {
+  display: block;
+}
+
+h2 {
+  color: #ac2bac;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thank-you {
+  display: none;
+  text-align: center;
+  font-size: 1.2rem;
+  color: green;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="image-section">
+      <img src="survey.jpg" alt="Heat Survey Visual">
+    </div>
+   
+
+    <div class="container">
+        <h3>AN OPINION SURVEY ON CITIZEN'S EXPERIENCES WITH HEAT</h3>
+        <p>The heat in India is becoming unbearable during the summer months. Citizens are facing discomfort, increased expenses and health ailments due to the rising temperatures. In addition to the growing crisis, India has not declared Heatwaves as a national disaster. The result? We are not prepared for this climate and health crisis!
+
+</p>
+<br>
+<p>Take this short survey to help us understand your experience better.</p>
+
+      <form id="surveyForm">
+        <div class="question active">
+          <h2>Are you facing any health problems due to rising temperatures?</h2>
+          <label><input type="radio" name="q1" required> Yes</label>
+          <label><input type="radio" name="q1"> No</label>
+        </div>
+
+        <div class="question">
+          <h2>Have you noticed fewer birds or animals in your neighbourhood?</h2>
+          <label><input type="checkbox" name="q2"> Less green cover for them</label>
+          <label><input type="checkbox" name="q2"> Summers too hot for survival</label>
+          <label><input type="checkbox" name="q2"> No access to water</label>
+          <label><input type="checkbox" name="q2"> I’ll place a bowl of water today</label>
+        </div>
+
+        <div class="question">
+          <h2>What challenges do outdoor workers face in peak summers?</h2>
+          <label><input type="checkbox" name="q3"> Risk of heatstroke</label>
+          <label><input type="checkbox" name="q3"> No clean water</label>
+          <label><input type="checkbox" name="q3"> No place to rest</label>
+          <label><input type="checkbox" name="q3"> Sunburns, exhaustion</label>
+          <label><input type="checkbox" name="q3"> Still need to work</label>
+        </div>
+
+        <div class="question">
+          <h2>Should heatwaves be declared a national disaster?</h2>
+          <label><input type="radio" name="q4" required> Yes</label>
+          <label><input type="radio" name="q4"> No</label>
+        </div>
+
+        <div class="question">
+          <h2>Your Details</h2>
+          <label>Name: <input type="text" name="name" required></label>
+          <label>Email: <input type="email" name="email" required></label>
+        </div>
+
+        <div class="buttons">
+          <button type="button" id="prevBtn">Previous</button>
+          <button type="button" id="nextBtn">Next</button>
+          <button type="submit" id="submitBtn" style="display:none;">Submit</button>
+        </div>
+      </form>
+
+      <div class="thank-you" id="thankYouMessage">
+        <p>Thank you for submitting the survey! 🌞</p>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  let current = 0;
+  const questions = document.querySelectorAll('.question');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const form = document.getElementById('surveyForm');
+  const thankYou = document.getElementById('thankYouMessage');
+
+  function showQuestion(index) {
+    questions.forEach((q, i) => q.classList.toggle('active', i === index));
+
+    nextBtn.style.display = index < questions.length - 1 ? 'inline-block' : 'none';
+    submitBtn.style.display = index === questions.length - 1 ? 'inline-block' : 'none';
+    prevBtn.style.display = index > 0 ? 'inline-block' : 'none';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (current < questions.length - 1) {
+      current++;
+      showQuestion(current);
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (current > 0) {
+      current--;
+      showQuestion(current);
+    }
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.style.display = 'none';
+    thankYou.style.display = 'block';
+  });
+
+  showQuestion(current); 
+</script>
+
+</body>
+</html>
