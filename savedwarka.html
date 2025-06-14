@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Save Dwarka Forest</title>
   <style>
     body {
@@ -39,7 +39,10 @@
       margin-bottom: 20px;
     }
 
-    .petition-left p, .petition-left ul, .petition-left h4, .petition-left strong {
+    .petition-left p,
+    .petition-left ul,
+    .petition-left h4,
+    .petition-left strong {
       font-size: 1rem;
       line-height: 1.6;
     }
@@ -69,7 +72,8 @@
       gap: 10px;
     }
 
-    .form-group input, .form-group select {
+    .form-group input,
+    .form-group select {
       flex: 1 1 48%;
       padding: 10px;
       margin-bottom: 10px;
@@ -104,6 +108,15 @@
       color: #0000ee;
       text-decoration: underline;
     }
+
+    .thank-you-message {
+      display: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -115,8 +128,9 @@
       <img src="savedwarka1.webp" alt="Save Dwarka Forest" />
       <br><br>
       <p><strong>To:</strong><br>
-      <strong>The Department Of Forest And Wildlife,</strong><br>
-      <strong>Government Of NCT of Delhi,</strong></p>
+        <strong>The Department Of Forest And Wildlife,</strong><br>
+        <strong>Government Of NCT of Delhi,</strong>
+      </p>
 
       <p>On 13th of April 2025, citizens of Delhi bore witness to the devastating impact of extreme heat on animals and birds trapped in the forest.</p>
 
@@ -146,7 +160,7 @@
 
     <div class="petition-right">
       <h2>Sign The Petition</h2>
-      <form>
+      <form id="petitionForm">
         <div class="form-group">
           <input type="text" placeholder="First name*" required>
           <input type="text" placeholder="Last name*" required>
@@ -175,8 +189,24 @@
         </p>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
+
+      <!-- Thank you message -->
+      <div class="thank-you-message" id="thankYouMessage">
+        ✅ Thanks for submitting!
+      </div>
     </div>
   </div>
 
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById('petitionForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent actual form submission
+      form.style.display = 'none'; // Hide the form
+      thankYouMessage.style.display = 'block'; // Show thank you message
+    });
+  </script>
 </body>
 </html>
