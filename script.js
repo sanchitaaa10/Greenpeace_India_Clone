@@ -20,6 +20,17 @@
 
 
 
+  window.onload = function () {
+    setTimeout(function () {
+      document.getElementById("eventPopup").style.display = "flex";
+    }, 5000); // 5 seconds
+  };
+
+  function closePopup() {
+    document.getElementById("eventPopup").style.display = "none";
+  }
+
+
 
 
 const openBtn = document.getElementById("openImpactBtn");
