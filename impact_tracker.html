@@ -49,6 +49,34 @@
   </style>
 </head>
 <body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+
   <div class="donation-box">
     <h2>Donate Now</h2>
     <input type="number" id="donationAmount" placeholder="Enter amount (₹)" min="1"/>
@@ -58,12 +86,61 @@
     <div class="impact">
       <h3>🌟 Impact Tracker</h3>
       <p>Total Donations: ₹<span id="totalDonation">0</span></p>
-      <p>Total Donors: <span id="totalDonors">0</span></p>
+      <p>Total number of Donations: <span id="totalDonors">0</span></p>
     </div>
   </div>
 
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+
   <script>
-    // Initial values (these can be stored in localStorage or a backend in real project)
+    
     let totalDonation = 0;
     let totalDonors = 0;
 
