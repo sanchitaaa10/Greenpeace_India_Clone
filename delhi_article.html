@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi's Informal Workers Join Hands with IMD</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .breadcrumbs {
+      font-size: 14px;
+      color: #00754a;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons img {
+      width: 28px;
+      margin-right: 10px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    img.article-image {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid #ccc;
+      font-style: italic;
+      color: #333;
+    }
+
+
+    .comment-section {
+      margin-top: 40px;
+    }
+
+    .comment-section h2 {
+      font-size: 24px;
+    }
+
+    .comment-form {
+      background: #f7f5ef;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .comment-form label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form input[type="email"],
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .comment-form input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .comment-form button {
+      background: #ffcc00;
+      border: none;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .footer {
+  background-color: rgb(29, 63, 12);
+  color: #f0f0f0;
+  padding: 100px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 80px;
+}
+.country-divider{
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+.footer-column {
+  flex: 1 1 180px;
+  min-width: 150px;
+  gap:90px;
+}
+
+.footer-country .country-wrapper {
+  display: flex;
+  align-items: center;
+  padding:50px;
+  
+}
+
+.footer-logo {
+  width: 24px;
+  height: auto;
+}
+
+.country-select {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+  
+}
+
+.footer-column ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  min-width: 140px;
+}
+
+.social p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+
+  <div class="container">
+    <div class="breadcrumbs">Press Release &gt; Greenpeace | Health and Living</div>
+    <h1>Delhi’s Informal Workers Join Hands with IMD to Strengthen Heatwave Warning Services.</h1>
+    <div class="meta">Greenpeace India &nbsp;|&nbsp; June 13, 2025 &nbsp;•&nbsp; 2 min read &nbsp;•&nbsp; <span>💬 0 Comments</span></div>
+    <div class="social-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" title="WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Facebook" title="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/3670/3670032.png" alt="X" title="X">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" title="Email">
+    </div>
+
+    <p>In a landmark initiative aimed at making weather forecasting more inclusive and accessible, vendor networks across Delhi and the India Meteorological Department (IMD) and collaborative joined hands to ensure heatwave warnings effectively reach to the community. As a part of this collaboration, IMD’s daily weather forecasts and heat wave alerts are being simplified and translated into easy-to-understand local languages. These messages are now being shared through community WhatsApp groups and being prominently displayed at vending carts, labour chowks, and waste segregation points through posters and handwritten notices across the city.</p>
+
+    <p>Shepherded by Greenpeace India in collaboration with various informal workers’ associations and the IMD, the initiative places informal worker collectives, who are among the most affected by extreme heat, at the heart of climate resilience efforts. The aim is to develop a grassroots early warning system by leveraging the trust and reach of street vendors, gig workers, and daily wage labourers as frontline communicators of weather alerts.</p>
+
+    <img class="article-image" src="https://i.imgur.com/B7qLtTI.jpg" alt="Community Climate Messengers Workshop">
+
+    <p>For the first time, communities at high risk of heatwave impacts are playing a lead role in the dissemination of IMD’s heatwave alerts, ensuring early action where it is needed most. IMD is supporting the effort by co-creating simplified, user-friendly heatwave warnings in Hindi in partnership with community members, ensuring the forecasts are not only understood but are also actionable. This people-centric model empowers communities to adapt the alerts into localised formats, turning everyday workers into climate messengers. It marks a significant step toward realizing the vision of “early warning for all” by making IMD’s advisories more relevant and impactful on the ground.</p>
+
+    <p>In this context, a multi-stakeholder workshop was organised jointly by IMD, Greenpeace India and informal worker associations. The workshop brought together street vendors, outdoor and informal workers, to promote a holistic approach to heatwave preparedness. It focused on raising awareness of the health risks posed by extreme weather—especially heatwaves—and explored ways to integrate early warning systems and health advisories into the daily routines of informal workers.</p>
+
+    <p>This workshop & collaboration go beyond mere weather information dissemination—it represents a vital step toward building local resilience and empowering communities to act on early warnings. It underscores that extreme heat requires a coordinated and systemic response whereby the people-powered actions are not only possible but also essential for effective, efficient and actionable early warning services for all.</p>
+
+    <blockquote>“This collaboration is not just about sharing information—it’s about building local resilience and enabling communities to act on that information. It is a call to recognise extreme heat as a national disaster demanding urgent, systemic response. With rising deaths and hospitalisations, we need community-led early warning systems to prevent and prepare for adverse impacts and also robust public infrastructure, health services to respond effectively to the crisis. The Delhi Rising campaign shows that people-powered action is not only possible, but it’s perhaps the most essential,” said Amrutha Green of Greenpeace India initiative.</blockquote>
+
+    <div class="comment-section"></div>
+      <h2>Comments</h2>
+      <div class="comment-form">
+        <form id="commentForm">
+          <label for="comment">Comment (required)</label>
+          <textarea id="comment" name="comment" required></textarea>
+
+          <label for="name">Name (required)</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email (required)</label>
+          <input type="email" id="email" name="email" required>
+
+          <label>
+            <input type="checkbox" required>
+            I agree on providing my name, email and content so that my comment can be stored and displayed in the website.
+          </label>
+
+          <button type="submit">Post comment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks for submitting!');
+      this.reset();
+    });
+  </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi's Informal Workers Join Hands with IMD</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .breadcrumbs {
+      font-size: 14px;
+      color: #00754a;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+    }
+
+    .social-icons img {
+      width: 28px;
+      margin-right: 10px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    img.article-image {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    blockquote {
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid #ccc;
+      font-style: italic;
+      color: #333;
+    }
+
+
+    .comment-section {
+      margin-top: 40px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .comment-section h2 {
+      font-size: 24px;
+    }
+
+    .comment-form {
+      background: #f7f5ef;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .comment-form label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form input[type="email"],
+    .comment-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .comment-form input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .comment-form button {
+      background: #ffcc00;
+      border: none;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+
+    h2 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .comment-box {
+      background: #f7f4ed;
+      padding: 30px;
+      border-radius: 6px;
+      max-width: 900px;
+    }
+
+    .comment-box h3 {
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .row input {
+      flex: 1;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      background-color: #f7e46b;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+     <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+  <div class="container" style="margin-top: 40px;">
+    <div class="breadcrumbs">Jobs &gt; Greenpeace</div>
+    <h1>Creative Interventions Campaigner</h1>
+    <div class="meta">Greenpeace India • June 5, 2025 • 💬 0 Comments</div>
+  
+    <div class="social-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" title="WhatsApp">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Facebook" title="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/3670/3670032.png" alt="X" title="X">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" title="Email">
+    </div>
+  
+    <p><strong>Unit</strong> : Operations</p>
+    <p><strong>Location</strong> : Bangalore</p>
+    <p><strong>Reports to</strong> : Regional Operations Manager</p>
+    <p><strong>Remuneration</strong> : 10,26,900 /- per annum</p>
+    <p><strong>Employment Status</strong> : 1 year of employment with a potential opportunity to extend</p>
+    <p><strong>Last date to receive application</strong> : 13th June 2025</p>
+  
+    <h3>Main Duties:</h3>
+    <ul>
+      <li>Develop and lead the implementation of operations strategies central to campaign objectives.</li>
+      <li>Lead the design and implementation of tactics that contribute to public and corporate behavioural change.</li>
+      <li>Undertake research and investigations for campaign projects.</li>
+      <li>Plan and implement creative interventions and environmental protests.</li>
+    </ul>
+  
+    <h3>To follow :</h3>
+    <ul>
+      <li>Protocols and procedures agreed within Greenpeace India.</li>
+      <li>Principles of Non-violence and Peaceful creative interventions.</li>
+      <li>Seek legal advice when needed to plan interventions.</li>
+    </ul>
+  
+    <h3>To Apply:</h3>
+    <p>Send your letter of interest (350 words or less) with resume to <a href="mailto:careers.india@greenpeace.org">careers.india@greenpeace.org</a> stating ‘Application for the Creative Interventions Campaigner’.</p>
+    <p><strong>Greenpeace India is dedicated to upholding gender equality and inclusivity and encourages applications from diverse backgrounds.</strong></p>
+  
+    <button style="margin-top: 15px; background: #e0f2dc; border: 1px solid #ccc; padding: 8px 12px; border-radius: 4px; font-weight: bold;">
+      ⬇ Download JD
+    </button>
+  </div>
+  
+  <h2>Comments</h2>
+
+  <div class="comment-box">
+    <h3>Leave your reply</h3>
+    <form id="commentForm">
+      <label for="comment">Comment (required)</label>
+      <textarea id="comment" required placeholder="Your Comment" rows="6"></textarea>
+
+      <div class="row">
+        <div>
+          <label for="name">Name (required)</label>
+          <input type="text" id="name" required placeholder="Your Name">
+        </div>
+        <div>
+          <label for="email">Email (required)</label>
+          <input type="email" id="email" required placeholder="Your Email">
+        </div>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="consent" required>
+        <label for="consent">I agree on providing my name, email and content so that my comment can be stored and displayed in the website.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Post comment</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thanks for submitting!");
+      this.reset();
+    });
+  </script>
+   
+  </div>
+</body>
+</html>

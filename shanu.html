@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .article-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      gap: 24px;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      position: relative;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+      transition: color 0.3s;
+      padding: 6px 4px;
+      font-size: 16px;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 3px;
+      background-color: #45c300;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .donate-btn {
+      background-color: #85e135;
+      padding: 12px 36px;
+      border-radius: 6px;
+      color: #111;
+      font-weight: bold;
+      font-size: 17px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #76cb2f;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .search-box i {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #555;
+      padding: 5px;
+    }
+
+.breadcrumbs {
+  color: #4caf50;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.social-icons button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* .main-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+.audio-player {
+  margin: 20px 0;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+}
+
+.hashtag {
+  font-weight: bold;
+  color: #1b5e20;
+  background-color: #e6f5e6;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+
+     <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+  <img src="greenpeacelogo.png" alt="Greenpeace Logo">
+</a>
+
+    </div>
+
+    <nav class="nav-links">
+      <a href="publications.html">Publications</a>
+      <a href="pressrelease.html">Press Releases</a>
+      <a href="volunteercorner.html">Volunteer Corner</a>
+      <a href="impact_tracker.html">Tracker</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="donationform.html" class="donate-btn">Donate</a>
+    </div>
+
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+    </div>
+  </header>
+
+    
+    <section class="article-section">
+    <div class="breadcrumbs">Story > Greenpeace</div>
+    <h1 class="title">मिनी सीरीज: हाईड्रेशन हीरो शानू की कहानी</h1>
+    <div class="meta">
+      <span>ग्रीनपीस इंडिया</span> |
+      <span>June 13, 2025</span> |
+      <span>0 Comments</span>
+    </div>
+    <div class="social-icons">
+      <button>🔗</button>
+      <button>📱</button>
+      <button>✉️</button>
+    </div>
+
+    <div class="image-container">
+      <img src="shanu.webp" alt="Shanu" class="main-image" height="100cm" widht="100cm">
+    </div>
+
+    <div class="audio-player">
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        आपका ब्राउज़र ऑडियो टैग को सपोर्ट नहीं करता है।
+      </audio>
+    </div>
+
+    <div class="article-content">
+      <p>सुंदर नगरी के कबूतर चौक पर सुबह 7 बजे से एक आवाज़ गूंजने लगती है, “लो स्टेरिंग ठीक करवा लो, बर्फ मिल जाएगी!” ये आवाज़ है शानू भाई की, जो पिछले 24–25 साल से यहीं पर गाड़ी स्टेरिंग के पुरजे और बर्फ बेचने का काम करते हैं। पहली नज़र में थोड़े खड़ूस लग सकते हैं, लेकिन मोहल्ले में हर कोई जानता है कि मदद के लिए सबसे
+         पहले दौड़ने वाले शख्स वही हैं। सब उन्हें स्नेह से ‘शानू भाई’ कहकर बुलाते हैं।</p>
+      <p>2020 में शानू भाई की दुकान के पास एक प्याऊ लगाया गया था। लेबर चौक पर मजदूरी के इंतज़ार में बैठने वाले मज़दूरों के लिए यह प्याऊ राहत की तरह था। शुरू में कुछ दिन पानी आया, लोग प्यास बुझाते रहे। लेकिन धीरे-धीरे प्याऊ बदहाल होता गया—कभी गंदा पानी, कभी बिल्कुल पानी नहीं, कभी महीनों सफाई नहीं। लोगों ने वहाँ से पानी पीना बंद कर दिया। शानू भाई को यह बात चुभी। उन्होंने पार्षद कार्यालय में शिकायत भी की, लेकिन कोई कार्रवाई नहीं हुई। तब उन्होंने खुद इसे दोबारा चालू करने का निर्णय लिया।
+
+</p>
+      <p>अपनी रोज़ की ₹400-₹500 की मजदूरी में से पैसे बचाकर उन्होंने प्याऊ की सफाई करवाई, मोटर का डायरेक्ट कनेक्शन लगवाया और अब हर 15-20 दिन में खुद ही टंकी साफ़ करवाते हैं। लगभग ₹250-₹300 हर बार खर्च होता है, लेकिन वो कभी किसी से मदद नहीं मांगते। उनका कहना है, “अगर मैं खुद दिनभर धूप में बर्फ बेचकर जी रहा हूँ, तो सोचिए वो मज़दूर कितना तड़पते होंगे, जिनके पास न पैसा है न सुविधा। जब प्याऊ में पानी नहीं होता, मुझे लगता है जैसे सबकी प्यास मेरी अपनी बन गई हो।”</p>
+      <p>उनके अपने घर में भी जिम्मेदारियाँ कम नहीं हैं—बच्चों की पढ़ाई, राशन, रोज़मर्रा का खर्च—किन्तु फिर भी वो इस काम को प्राथमिकता देते हैं। वे कहते हैं, “मैं रहूं या न रहूं, लेकिन ये प्याऊ बंद नहीं होना चाहिए। ये सिर्फ पानी नहीं, लोगों की राहत है, इज़्ज़त है।”</p>
+      <p class="hashtag">#DelhiRising</p>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+  <div class="footer-top">
+    <div class="footer-country">
+      <div class="country-wrapper">
+        <img src="logo.png" alt="Greenpeace India Logo" class="footer-logo">
+        <p class="country-select">India ▼</p>
+      </div>
+    
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Offices</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">#Careers</a></li>
+        <li><a href="#">Supporter Care</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">POSH Policy</a></li>
+        <li><a href="#">Copyright and Terms</a></li>
+        <li><a href="#">Community Policy</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social">
+      <p>Follow us</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="footer-divider" />
+
+  <div class="footer-bottom">
+    <p>© Greenpeace India 2025 | Unless <strong>otherwise stated</strong>, the copy of the website is licensed under a <a href="#">CC-BY International License</a></p>
+  </div>
+</footer>
+</body>
+</html>
