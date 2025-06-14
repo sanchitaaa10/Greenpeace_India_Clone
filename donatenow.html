@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delhi Rising - Greenpeace</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("backdn.webp") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.delhi-rising-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.left-content, .right-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.left-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.left-content h3 {
+  color: crimson;
+  margin-top: 20px;
+}
+
+.tagline {
+  font-weight: bold;
+  color: #000;
+  margin: 10px 0;
+}
+
+.map-box {
+  position: relative;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.donate-btn, .user-stories-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-stories-btn {
+  background: #8e44ad;
+}
+
+.language-select {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.right-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.donate-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.donate-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.donate-card .label {
+  background: #ccff00;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controls button {
+  padding: 5px 10px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls .donate-action {
+  background: #ff00ff;
+  color: white;
+  border-radius: 5px;
+}
+.map-box {
+  position: relative;
+  margin-top: 20px;
+  height: 90vh;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.map-and-donate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.map-box {
+  flex: 1;
+  min-width: 400px;
+  height: 600px;
+}
+
+.right-content {
+  flex: 1;
+  min-width: 300px;
+}
+.delhi-rising-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.left-content, .right-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <section class="delhi-rising-section">
+  <!-- Left content including text + map -->
+  <div class="left-content">
+    <img src="delhirisinglogo.png" alt="Delhi Rising" class="logo" />
+    <h1>HEAT IS RISING,<br>AND SO ARE WE</h1>
+    <p>
+      Delhi’s extreme heat is life-threatening for our sabziwalas, delivery persons and other outdoor workers who lack shade and clean drinking water.
+      Heat-related illnesses are claiming thousands of lives every year in India.
+    </p>
+    <h3>DELHI RISING IS A CITIZEN-DRIVEN INITIATIVE FOR RELIEF IN THE TESTING HEATWAVE MONTHS</h3>
+    <p class="tagline">DIL HAI TOH DILLI HAI! ❤️</p>
+
+    <!-- MAP directly below the tagline -->
+    <div class="map-box">
+      <iframe class="map-iframe" src="https://maps.greenpeace.org/maps/gpin/delhi-rising/"></iframe>
+      <div class="map-buttons">
+        <button class="donate-btn">DONATE NOW</button>
+        <button class="user-stories-btn">USER STORIES</button>
+        <select class="language-select">
+          <option>English</option>
+          <option>Hindi</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right content with donate cards -->
+  <div class="right-content">
+    <h2>You can participate in Delhi Rising by donating</h2>
+
+    <div class="donate-card">
+      <img src="dn1.jpg" alt="Matka + Stand" />
+      <div class="label">MATKA+STAND: ₹ 5,000</div>
+      <p>(Clay water pot & Stand, set of 3)</p>
+      <div class="controls">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+        <button class="donate-action">Donate</button>
+      </div>
+    </div>
+
+    <div class="donate-card">
+      <img src="dn2.jpg" alt="Canopy" />
+      <div class="label">CANOPY: ₹ 3,000</div>
+      <p>(made with crowd-sourced winter wear, includes labour cost, stitching costs & logistics)</p>
+      <div class="controls">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+        <button class="donate-action">Donate</button>
+      </div>
+    </div>
+
+    <div class="donate-card">
+      <img src="dn3.jpg" alt="Canopy Umbrella" />
+      <div class="label">CANOPY UMBRELLA: ₹ 2,500</div>
+      <p>(different canopies depending on the location)</p>
+      <div class="controls">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+        <button class="donate-action">Donate</button>
+      </div>
+    </div>
+
+    <div class="donate-card">
+      <img src="dn4.jpg" alt="Bench Seat" />
+      <div class="label">BENCH SEAT: ₹ 6,000</div>
+      <p>(benches & transport cost)</p>
+      <div class="controls">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+        <button class="donate-action">Donate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
