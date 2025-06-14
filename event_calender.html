@@ -151,7 +151,71 @@ body {
       background-color: #2a9b63;
     }
 
-    .footer {
+
+/* Centered Popup */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: white;
+  border: 2px solid #3cb878;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  width: 320px;
+  padding: 24px 20px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.popup-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.popup-form button {
+  padding: 10px;
+  background-color: #3cb878;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-form button:hover {
+  background-color: #2a9b63;
+}
+
+.close-btn {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  font-size: 24px;
+  color: #444;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.thank-you {
+  color: green;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.footer {
   background-color: rgb(29, 63, 12);
   color: #f0f0f0;
   padding: 100px;
@@ -285,6 +349,8 @@ body {
     </div>
   </header>
 
+
+
 <!-- Calendar Section -->
 <section class="calendar-section">
   <h2 class="calendar-title">Upcoming Events</h2>
@@ -292,6 +358,20 @@ body {
     <!-- Events will be injected here -->
   </div>
 </section>
+
+<div id="popupForm" class="popup-form">
+  <div class="form-content">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <h3>Event Registration</h3>
+    <form id="registerForm" onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="tel" name="contact" placeholder="Contact Number" required pattern="[0-9]{10}" title="Enter a 10-digit number" />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="thankYouMsg" class="thank-you" style="display:none;">Thanks for registering!</p>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer-top">
@@ -343,7 +423,7 @@ body {
 
 
 <script>
-  // Example events array
+  
   const events = [
     {
       title: "Climate Justice Webinar",
@@ -382,12 +462,37 @@ body {
       <p><strong>Location:</strong> ${event.location}</p>
       <p>${event.description}</p>
       <div class="event-actions">
-        <a href="${event.link}"><button>Register</button></a>
+        <button onclick="openForm()">Register</button>
       </div>
     `;
     eventList.appendChild(div);
   });
+
+  
+  function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+    document.getElementById("thankYouMsg").style.display = "none";
+    document.getElementById("registerForm").reset();
+    document.getElementById("registerForm").style.display = "block";
+  }
+
+  // Hide form
+  function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+  }
+
+  // Handle submission
+  function submitForm(event) {
+    event.preventDefault();
+    document.getElementById("registerForm").style.display = "none";
+    document.getElementById("thankYouMsg").style.display = "block";
+
+    setTimeout(() => {
+      closeForm();
+    }, 3000);
+  }
 </script>
+
 
 </body>
 </html>
